@@ -1,7 +1,8 @@
+
 const chalk = require("chalk");
 const moment = require("moment");
 const Discord = require("discord.js");
-const ayarlar = require("../ayarlar.json");
+const ayarlar = require("../ayarlar/ayarlar.json");
 
 var prefix = ayarlar.prefix;
 
@@ -14,16 +15,7 @@ module.exports = client => {
       client.user.username
     } ismi ile giriş yapıldı!`
   );
-  client.user.setStatus("online");
-  //idle = boşta
-  //dnd = rahatsız etmeyin
-  //online = çevrimiçi
-  var oyun = ["a!yardım", "a!güncellemeler / yeni gelen komutlar","günceller yapıldı yupiğğğ","Web site açıldı oleyyy","Web sitemiz http://tigerinltex-bot.tk/"];
 
-  setInterval(function() {
-    var random = Math.floor(Math.random() * (oyun.length - 0 + 1) + 0);
-
-    client.user.setActivity(oyun[random]);
-  }, 2 * 5000);
+    client.user.setActivity("discord.gg/uKnVD665Hn | TigerInlteX");
 };
 
