@@ -1,4 +1,3 @@
-
 const chalk = require("chalk");
 const moment = require("moment");
 const Discord = require("discord.js");
@@ -15,7 +14,16 @@ module.exports = client => {
       client.user.username
     } ismi ile giriş yapıldı!`
   );
+  client.user.setStatus("online");
+  //idle = boşta
+  //dnd = rahatsız etmeyin
+  //online = çevrimiçi
+  var oyun = ["TigerınlTeX <3 https://discord.gg/xX84GmzFVW", "kayıt olmak için ismini yaz","Web sitemiz http://tigerinltex-bot.tk/"];
 
-    client.user.setActivity("discord.gg/uKnVD665Hn | TigerInlteX");
+  setInterval(function() {
+    var random = Math.floor(Math.random() * (oyun.length - 0 + 1) + 0);
+
+    client.user.setActivity(oyun[random]);
+  }, 2 * 5000);
 };
 

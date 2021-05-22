@@ -69,7 +69,7 @@ datab.add(`yetkili.${message.author.id}.kadin`, 1)
 datab.add(`yetkili.${message.author.id}.toplam`, 1)
 let alldata = datab.fetch(`yetkili.${message.author.id}.toplam`)
 
-member.setNickname(`${tag} ${name} | ${age}`)
+member.setNickname(`${tag} ${name} • ${age}`)
 member.roles.add(erkekrol)
 member.roles.add(erkekrol2)
 member.roles.remove(kayıtsız)
@@ -78,35 +78,33 @@ member.roles.remove(kayıtsız)
 message.channel.send(new MessageEmbed()
 .setAuthor(message.author.tag, message.author.avatarURL({dynamic:true}))
 .setDescription(`
-<a:yuvarlak_tk:817718330147471421> kayıt edilen kullanıcı : ${member}
+<a:yuvarlak_tk:817059580273098764> kayıt edilen kullanıcı : ${member}
 
-<a:dken:817060781283213332> verilen rol : ${erkekrol}
+<a:dken:817059635122143283> verilen rol : ${erkekrol}
 
-<a:yuklenyorr:817060720276537385> yeni isim yaş : ${tag} ${name} | ${age}
+<a:yuklenyorr:817059736771100752> yeni isim yaş : ${tag} ${name} | ${age}
 
-<a:yldz~1:817060744779923507> kayıt eden yetkili : ${message.author}
+<a:yesl_ates:817059700407271504> kayıt eden yetkili : ${message.author}
 
-<a:yesl_ates:817060762982940703> yetkilinin kayıt sayısı : ${alldata}
 `)            
-.setColor('#65d8c4'))
+.setColor('RANDOM'))
   
-genelchat.send(new MessageEmbed()
-.setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
-.setDescription(`
-<a:Zil:817061131277303808> ${member} aramıza ${erkekrol} rolü ile katıldı
 
-<a:yuvarlak_tk:817718330147471421> kayıt eden yetkili ${message.author}
-
-<a:yesl_ates:817060762982940703> aramıza hoşgeldin ${member}
-
-<a:uyar:817079766267199518> <#&811949040626565122> okumayı unutma iyi eğlenceler 
-`)
-.setColor('#65d8c4'))
+genelchat.send(`sunucumuza hoşgeldin iyi eğlenceler <@`+member.id+`> `)
   
 savelog.send(new MessageEmbed()
-.setAuthor(message.author.tag, message.author.avatarURL({dynamic: true}))
-.setDescription(`• Yetkili: ${message.author} | \`${message.author.id}\`\n• Kullanıcı: ${member} | \`${member.id}\`\n• Güncel İsim: \`${tag} ${name} | ${age}\`\n• Roller: ${erkekrol}, ${erkekrol2} \n• Kanal: <#${message.channel.id}> | \`${message.channel.id}\`\n• Kayıtlar: \`${alldata}\` `)
-.setColor('#65d8c4'))
+.setAuthor(message.author.tag, message.author.avatarURL({dynamic:true}))
+.setDescription(`
+<a:yuvarlak_tk:817059580273098764> kayıt edilen kullanıcı : ${member}
+
+<a:dken:817059635122143283> verilen rol : ${erkekrol}
+
+<a:yuklenyorr:817059736771100752> yeni isim yaş : ${tag} ${name} • ${age}
+
+<a:yesl_ates:817059700407271504> kayıt eden yetkili : ${message.author}
+
+`)            
+.setColor('RANDOM'))
 
 
 datab.push(`isim.${message.guild.id}`, {userID: member.id, isim: name, yas: age, role: erkekrol.id})}

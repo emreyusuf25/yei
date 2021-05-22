@@ -133,16 +133,16 @@ client.on("guildMemberAdd", member => {
       if(üs) {
         üyesayısı = üyesayısı.replace(/([0-9])/g, d => {
           return {
-            '0': `<a:0_:817061069401882644>`,
-            '1': `<a:1_:817061028164010044>`,
-            '2': `<a:2_:817061009978163221>`,
-            '3': `<a:3_:817060949289992194>`,
-            '4': `<a:4_:817060935247200336>`,
-            '5': `<a:5_:817060913605640243>`,
-            '6': `<a:6_:817060897494401034>`,
-            '7': `<a:7_:817060847334588446>`,
-            '8': `<a:8_:817060833204764702>`,
-            '9': `<a:9_:817060803940581446>`}[d];})}
+            '0': `<a:0_:817054607800139817>`,
+            '1': `<a:1_:817054601378791434>`,
+            '2': `<a:2_:817054616063442955>`,
+            '3': `<a:3_:817054618608468029>`,
+            '4': `<a:4_:817054617896484875>`,
+            '5': `<a:5_:817054618604535859>`,
+            '6': `<a:6_:817054618780434502>`,
+            '7': `<a:7_:817054620173074443>`,
+            '8': `<a:8_:817054619439464460>`,
+            '9': `<a:9_:817054620042919946>`}[d];})}
       const kanal = member.guild.channels.cache.find(r => r.id === "811886132903936002");//mesaj atılcak kanal id
       let register = '811888420351639582'
     let user = client.users.cache.get(member.id);
@@ -150,25 +150,25 @@ client.on("guildMemberAdd", member => {
       const kurulus = new Date().getTime() - user.createdAt.getTime();  
      const gecen = moment.duration(kurulus).format(` YY **[Yıl,]** DD **[Gün,]** HH **[Saat,]** mm **[Dakika,]** ss **[Saniye]**`) 
     var kontrol;
-  if (kurulus < 1296000000) kontrol = 'DİKKATTTT <a:uyar:817079766267199518> Hesap Durumu: Güvenilir Değil.'
-  if (kurulus > 1296000000) kontrol = '<a:yuvarlak_tk:817718330147471421> Hesap Durumu: Güvenilir Gözüküyor.'
+  if (kurulus < 1296000000) kontrol = 'DİKKATTTT <a:uyar:735469859382624286> Hesap Durumu: Güvenilir Değil.'
+  if (kurulus > 1296000000) kontrol = '<a:yuvarlak_tk:817059580273098764> Hesap Durumu: Güvenilir Gözüküyor.'
     moment.locale("tr");
   const embed = new Discord.MessageEmbed()
   .setAuthor(member.guild.name, member.guild.iconURL({dynamic:true}))
   .setDescription(`
-  <a:ZİL:817061131277303808> Ailemize hoşgeldin <@`+member.id+`>
+  <a:zill:817061296317923348> TigerınlTeX sunucumuza hoşgeldin <@`+member.id+`>
 
   `+kontrol+`
   
-  <a:yuklenyorr:817060720276537385> Kayıt olmak için ismini ve yaşını yazıp <@&811888420351639582> beklemen yeterlidir. <@&811888420351639582>sizinle ilgilenecektir
+  <a:yuklenyorr:817059736771100752> Kayıt olmak için ismini ve yaşını yazıp <@&811888420351639582> beklemen yeterlidir. <@&811888420351639582> sizinle ilgilenecektir
   
-  <a:dken:817060781283213332> Seninle birlikte `+üyesayısı+` üye'e ulaştık
+  <a:dken:817059635122143283> Seninle birlikte `+üyesayısı+` üye'e ulaştık
   
-  <a:uyar:817079766267199518> Sunucumuzun kurallarına uymayı unutma
+  <a:uyar:735469859382624286> Sunucumuzun kurallarına uymayı unutma
 
-  <a:yesl_ates:817060762982940703> Sunucumuzun gelişmesi için arkadaşlarını davet edebilirsin ve oyun odalarımızda online oyunları sesli bir şekilde oynayabilirsin
+  <a:yesl_ates:817059700407271504> Sunucumuzun gelişmesi için arkadaşlarını davet edebilirsin ve oyun odalarımızda online oyunları sesli bir şekilde oynayabilirsin
 `)
-  .setImage(`https://i.hizliresim.com/Pb5a7D.gif`)
+  .setImage(`https://cdn.glitch.com/0ba8c514-4a2c-46f2-bf66-d04c801e72fd%2FpUkzWu.gif?v=1619420178209`)
   kanal.send(embed)
   kanal.send(`<@&811888420351639582> <@`+member.id+`> Kişisinin `+kontrol+``)
 });
@@ -187,21 +187,22 @@ client.on("guildMemberAdd", member => {
      x = x.replace("birkaç saniye önce", " ")
      if(!x.includes("önce") || x.includes("sonra") ||x == " ") {
     const kytsz = member.guild.roles.cache.find(r => r.id === "811895854864269324") 
-     var rol = member.guild.roles.cache.get("811890114711388160") // ŞÜPHELİ HESAP ROLÜNÜN İDSİNİ GİRİN
+     var rol = member.guild.roles.cache.get("836864377881624607") // ŞÜPHELİ HESAP ROLÜNÜN İDSİNİ GİRİN
      var kayıtsız = member.guild.roles.cache.get(kytsz) // UNREGİSTER ROLÜNÜN İDSİNİ GİRİN
      member.roles.add(rol)
      member.roles.remove(kytsz)
 
-  member.user.send('Selam Dostum Ne Yazık ki Sana Kötü Bir Haberim Var Hesabın 1 Hafta Gibi Kısa Bir Sürede Açıldığı İçin Fake Hesap Katagorisine Giriyorsun Lütfen Bir Yetkiliyle İletişime Geç Onlar Sana Yardımcı Olucaktır.')
-  setTimeout(() => {
-  
-  }, 1000)
-  
-  
-     }
-          else {
-  
-          }
+
+    
+     setTimeout(() => {
+     
+     }, 1000)
+     
+     
+        }
+             else {
+     
+             }
       });
 
 //------------------------ŞÜPHELİ-HESAP-----------------------\\     STG
